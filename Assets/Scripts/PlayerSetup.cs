@@ -21,7 +21,6 @@ public class PlayerSetup : NetworkBehaviour
         else
         {
             DisableComponents();
-            Util.SetLayerRecursively(gameObject, LayerMask.NameToLayer("RemotePlayer"));
         }
     }
 
@@ -32,22 +31,20 @@ public class PlayerSetup : NetworkBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            // This is only to get rid of errors when exiting the game while in the unity editor
-            if (sceneCamera != null) { sceneCamera.SetActive(true); }
+            sceneCamera.SetActive(true);
         }
     }
 
-    // Disables components and objects that should not be on a remote player
     void DisableComponents()
     {
-        foreach (Behaviour behaviour in componentsToDisable)
+        foreach (Behaviour _behaviour in componentsToDisable)
         {
-            behaviour.enabled = false;
+            _behaviour.enabled = false;
         }
 
-        foreach (GameObject gameObject in gameObjectsToDisable)
+        foreach (GameObject _gameObject in gameObjectsToDisable)
         {
-            gameObject.SetActive(false);
+            _gameObject.SetActive(false);
         }
     }
 }
