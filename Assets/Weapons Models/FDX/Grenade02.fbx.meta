@@ -3,35 +3,30 @@ guid: 54417d0a6d73c4392a4ae8f4059a4321
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cube
-    100004: Cube.001
-    100006: Cube.002
-    100008: Cube.003
-    100010: Cube.004
-    100012: Cube.005
-    100014: Cylinder
-    100016: Cylinder.001
-    100018: Cylinder.002
-    100020: Cylinder.003
-    100022: //RootNode
-    100024: Light
-    100026: Torus
-    400000: Camera
-    400002: Cube
-    400004: Cube.001
-    400006: Cube.002
-    400008: Cube.003
-    400010: Cube.004
-    400012: Cube.005
-    400014: Cylinder
-    400016: Cylinder.001
-    400018: Cylinder.002
-    400020: Cylinder.003
-    400022: //RootNode
-    400024: Light
-    400026: Torus
-    2000000: Camera
+    100000: Cube
+    100002: Cube.001
+    100004: Cube.002
+    100006: Cube.003
+    100008: Cube.004
+    100010: Cube.005
+    100012: Cylinder
+    100014: Cylinder.001
+    100016: Cylinder.002
+    100018: Cylinder.003
+    100020: //RootNode
+    100022: Torus
+    400000: Cube
+    400002: Cube.001
+    400004: Cube.002
+    400006: Cube.003
+    400008: Cube.004
+    400010: Cube.005
+    400012: Cylinder
+    400014: Cylinder.001
+    400016: Cylinder.002
+    400018: Cylinder.003
+    400020: //RootNode
+    400022: Torus
     2100000: Material.002
     2100002: Material.004
     2100004: Material.005
@@ -72,7 +67,6 @@ ModelImporter:
     4300016: Cylinder.001
     4300018: Cylinder.002
     4300020: Cylinder.003
-    10800000: Light
   externalObjects: {}
   materials:
     importMaterials: 1
