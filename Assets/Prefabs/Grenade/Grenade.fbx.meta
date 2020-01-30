@@ -1,79 +1,22 @@
 fileFormatVersion: 2
-guid: 529f9a151e6c34a758274683c0d11e72
+guid: dd6b900daf9544ceeb17439043e00214
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cube
-    100004: Cube.001
-    100006: Cube.002
-    100008: Cube.003
-    100010: Cube.004
-    100012: Cube.005
-    100014: Cylinder
-    100016: Cylinder.001
-    100018: Cylinder.002
-    100020: Cylinder.003
-    100022: //RootNode
-    100024: Light
-    100026: Torus
-    400000: Camera
-    400002: Cube
-    400004: Cube.001
-    400006: Cube.002
-    400008: Cube.003
-    400010: Cube.004
-    400012: Cube.005
-    400014: Cylinder
-    400016: Cylinder.001
-    400018: Cylinder.002
-    400020: Cylinder.003
-    400022: //RootNode
-    400024: Light
-    400026: Torus
-    2000000: Camera
-    2100000: Material.002
-    2100002: Material.004
-    2100004: Material.005
-    2100006: Material.006
-    2100008: Material.007
-    2100010: Material.003
-    2100012: Material.001
-    2300000: Cube
-    2300002: Cube.001
-    2300004: Cube.002
-    2300006: Cube.003
-    2300008: Cube.004
-    2300010: Cube.005
-    2300012: Cylinder
-    2300014: Cylinder.001
-    2300016: Cylinder.002
-    2300018: Cylinder.003
-    2300020: Torus
-    3300000: Cube
-    3300002: Cube.001
-    3300004: Cube.002
-    3300006: Cube.003
-    3300008: Cube.004
-    3300010: Cube.005
-    3300012: Cylinder
-    3300014: Cylinder.001
-    3300016: Cylinder.002
-    3300018: Cylinder.003
-    3300020: Torus
-    4300000: Cylinder
-    4300002: Cube
-    4300004: Cube.001
-    4300006: Cube.002
-    4300008: Cube.003
-    4300010: Cube.004
-    4300012: Cube.005
-    4300014: Torus
-    4300016: Cylinder.001
-    4300018: Cylinder.002
-    4300020: Cylinder.003
-    10800000: Light
-    2186277476908879412: ImportLogs
+    100000: //RootNode
+    100002: Grenade
+    100004: Pull
+    400000: //RootNode
+    400002: Grenade
+    400004: Pull
+    2100000: Handle-base
+    2100002: Granade-base
+    2300000: Grenade
+    2300002: Pull
+    3300000: Grenade
+    3300002: Pull
+    4300000: Pull
+    4300002: Grenade
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -151,7 +94,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
