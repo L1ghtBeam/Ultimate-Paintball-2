@@ -13,6 +13,7 @@ public class Weapon : ScriptableObject
     [Tooltip("Rounds per minute for normal weapons, bursts per minute for burst weapons.")]
     public float FireRate;
     public float Inaccuracy;
+    public float BaseDamage;
 
     [Header("Bullet Settings")]
     public float Speed;

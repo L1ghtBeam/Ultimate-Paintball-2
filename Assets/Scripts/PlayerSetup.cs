@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 
+[RequireComponent(typeof(PlayerNetwork))]
 public class PlayerSetup : NetworkBehaviour
 {
     [SerializeField] Behaviour[] componentsToDisable = null;
@@ -25,6 +26,16 @@ public class PlayerSetup : NetworkBehaviour
         }
     }
 
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        string netID = GetComponent<NetworkIdentity>().netId.ToString();
+        PlayerNetwork playerNetwork = GetComponent<PlayerNetwork>();
+
+        GameManager.RegisterPlayer(netID, playerNetwork);
+    }
+
     private void OnDisable()
     {
         if (isLocalPlayer)
@@ -35,6 +46,8 @@ public class PlayerSetup : NetworkBehaviour
             // This is only to get rid of errors when exiting the game while in the unity editor
             if (sceneCamera != null) { sceneCamera.SetActive(true); }
         }
+
+        GameManager.UnRegisterPlayer(transform.name);
     }
 
     // Disables components and objects that should not be on a remote player

@@ -39,7 +39,7 @@ public class Bullet : NetworkBehaviour
             }
             else
             {
-                playerNetwork.RpcTakeDamage(5);
+                CmdPlayerShot(other.transform.name, 5f);
             }
         }
 
@@ -48,6 +48,15 @@ public class Bullet : NetworkBehaviour
         {
             CmdDestroyBullet();
         }
+    }
+
+    [Command]
+    void CmdPlayerShot(string playerID, float damage)
+    {
+        Debug.Log(playerID + " has been shot");
+
+        PlayerNetwork playerNetwork = GameManager.GetPlayer(playerID);
+        playerNetwork.TakeDamage(damage);
     }
 
     // Applies bullet settings to all players

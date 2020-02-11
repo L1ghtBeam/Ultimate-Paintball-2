@@ -6,17 +6,24 @@ public class PlayerNetwork : NetworkBehaviour
     [SyncVar]
     int health;
 
+    [SerializeField]
     int maxHealth = 100;
 
-    private void Start()
+    private void Awake()
+    {
+        SetDefaults();
+    }
+
+    void SetDefaults()
     {
         health = maxHealth;
     }
 
-    [ClientRpc]
-    public void RpcTakeDamage(int damage)
+    public void TakeDamage(float amount)
     {
-        health -= damage;
-        Debug.Log(gameObject + " has " + health + " health!");
+        health -= maxHealth;
+
+        Debug.Log(transform.name + " now has " + health + " health!");
     }
+
 }
