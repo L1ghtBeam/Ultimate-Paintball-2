@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a6e683ca5997549599eceab78f691e22
+guid: c561d089d481742e5bae5703faf66c3e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -249,7 +249,7 @@ ModelImporter:
     2100020: Material.019
     2100022: Material.011
     2100024: Material.014
-    2100026: No Name
+    2100026: Material.002
     2300000: Cone
     2300002: Cube
     2300004: Cube.001
