@@ -10,6 +10,8 @@ public class Bullet : NetworkBehaviour
 
     [SerializeField] LayerMask layersToIgnore = 0;
 
+    public int baseDamage;
+
     private void Update()
     {
         // Don't do anything without authority
@@ -39,7 +41,7 @@ public class Bullet : NetworkBehaviour
             }
             else
             {
-                CmdPlayerShot(other.transform.name, 5f);
+                CmdPlayerShot(other.transform.name, baseDamage);
             }
         }
 
@@ -51,7 +53,7 @@ public class Bullet : NetworkBehaviour
     }
 
     [Command]
-    void CmdPlayerShot(string playerID, float damage)
+    void CmdPlayerShot(string playerID, int damage)
     {
         Debug.Log(playerID + " has been shot");
 

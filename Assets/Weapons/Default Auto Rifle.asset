@@ -15,6 +15,7 @@ MonoBehaviour:
   Type: 0
   FireRate: 240
   Inaccuracy: 2
+  BaseDamage: 275
   Speed: 30
   Radius: 0.0625
   Count: 1

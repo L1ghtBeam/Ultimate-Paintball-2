@@ -18,7 +18,7 @@ public class PlayerShoot : NetworkBehaviour
     // Fires the weapon and tells the server
     // LocalPlayers gets player authority
     [Command]
-    void CmdShoot(Vector3 firePoint, Quaternion fireRotation, float bulletSpeed, float bulletRadius, float weaponInaccuracy, int bulletCount)
+    void CmdShoot(Vector3 firePoint, Quaternion fireRotation, float bulletSpeed, float bulletRadius, float weaponInaccuracy, int bulletCount, int baseDamage)
     {
         for (int i = 0; i < bulletCount; i++)
         {
@@ -27,8 +27,13 @@ public class PlayerShoot : NetworkBehaviour
             fireRotation = Quaternion.Euler(fireRotation.eulerAngles + (Vector3.up * hInaccuracy) + (Vector3.right * vInaccuracy));
 
             GameObject bullet = Instantiate(bulletPrefab, firePoint, fireRotation);
+
+            Bullet bulletScript = bullet.GetComponent<Bullet>();
+
             NetworkServer.SpawnWithClientAuthority(bullet, connectionToClient);
-            bullet.GetComponent<Bullet>().RpcApplyBulletSettings(bulletSpeed, bulletRadius);
+            bulletScript.RpcApplyBulletSettings(bulletSpeed, bulletRadius);
+
+            bulletScript.baseDamage = baseDamage;
         }
     }
 
@@ -47,7 +52,7 @@ public class PlayerShoot : NetworkBehaviour
     // Tells the server to fire the weapon
     void Shoot(Weapon weapon)
     {
-        CmdShoot(firePoint.position, firePoint.rotation, weapon.Speed, weapon.Radius, weapon.Inaccuracy, weapon.Count);
+        CmdShoot(firePoint.position, firePoint.rotation, weapon.Speed, weapon.Radius, weapon.Inaccuracy, weapon.Count, weapon.BaseDamage);
         fireCooldown = Util.RPMToCooldown(weapon.FireRate);
     }
 }

@@ -7,7 +7,7 @@ public class PlayerNetwork : NetworkBehaviour
     int health;
 
     [SerializeField]
-    int maxHealth = 100;
+    int maxHealth = 1000;
 
     private void Awake()
     {
@@ -19,9 +19,9 @@ public class PlayerNetwork : NetworkBehaviour
         health = maxHealth;
     }
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(int amount)
     {
-        health -= maxHealth;
+        health -= amount;
 
         Debug.Log(transform.name + " now has " + health + " health!");
     }
